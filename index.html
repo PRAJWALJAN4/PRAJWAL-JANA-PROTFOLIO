@@ -174,6 +174,10 @@
                     <div class="checkpoint-dot"></div>
                     <span class="checkpoint-label">Skills</span>
                 </div>
+                <div class="checkpoint" data-section="projects">
+                    <div class="checkpoint-dot"></div>
+                    <span class="checkpoint-label">Projects</span>
+                </div>
                 <div class="checkpoint" data-section="contact">
                     <div class="checkpoint-dot"></div>
                     <span class="checkpoint-label">Contact</span>
@@ -188,6 +192,7 @@
                     <a href="#about" class="nav-link">About</a>
                     <a href="#experience" class="nav-link">Journey</a>
                     <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-cta">Get in Touch!</a>
                     <button id="theme-toggle" class="theme-toggle-nav" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
@@ -614,16 +619,96 @@
                 </div>
             </section>
 
-            <section class="section section-compact" id="projects">
-                <div class="creator-showcase">
-                    <p class="creator-label">Currently Working On</p>
-                    <div class="creator-project">
-                        <i class="fas fa-rocket" style="font-size: 3rem; color: var(--accent);"></i>
-                        <span class="creator-name">Exciting Projects</span>
+            <section class="section" id="projects">
+                <h2 class="section-title">PROJECTS</h2>
+                <div class="projects-grid">
+                    <!-- Project 1: The Super Bot -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="image/project1.png" alt="The Super Bot" class="project-image"
+                                onerror="this.parentElement.innerHTML='<i class=\'fas fa-robot\'></i>'; this.parentElement.className='project-image-placeholder';">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">The Super Bot</h3>
+                            <p class="project-description">A high-performance, stateful AI agent built with LangGraph
+                                and Groq LPUs. Delivers near-instant reasoning (500+ tokens/sec) using Llama 3.3 and
+                                DeepSeek-R1, integrated with Tavily for real-time web search.</p>
+                            <div class="project-tech">
+                                <span class="tag">LangGraph</span>
+                                <span class="tag">Groq LPU</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Tavily</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://prajwaljan4.github.io/docs-about-my-superbot-/" target="_blank"
+                                    class="project-link project-link-github">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://my-super-bot-b9kts74qbjwoinfe6dzjcw.streamlit.app/" target="_blank"
+                                    class="project-link project-link-demo">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <p class="creator-tagline">Building innovative solutions with hardware & software. Stay tuned!</p>
-                    <a href="https://github.com/PRAJWALJAN4" target="_blank" class="creator-github"><i
-                            class="fab fa-github"></i> View My GitHub</a>
+
+                    <!-- Project 2: Voice Clone Lab -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="image/project2.png" alt="Voice Clone Lab" class="project-image"
+                                onerror="this.parentElement.innerHTML='<i class=\'fas fa-microphone-alt\'></i>'; this.parentElement.className='project-image-placeholder';">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Voice Clone Lab</h3>
+                            <p class="project-description">Professional end-to-end AI Voice Cloning lab. Allows instant
+                                cloning from 20s audio samples with high-fidelity synthesis via Coqui XTTS v2. Includes
+                                AI script generation and a persistent voice master library.</p>
+                            <div class="project-tech">
+                                <span class="tag">XTTS v2</span>
+                                <span class="tag">Replicate</span>
+                                <span class="tag">Groq AI</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://prajwaljan4.github.io/docs-about-voice-cloning-docs/" target="_blank"
+                                    class="project-link project-link-github">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://voice-cloning-lab-nn687ytz7r27y44b8lpz9h.streamlit.app/"
+                                    target="_blank" class="project-link project-link-demo">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: RECON-1 -->
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">RECON-1</h3>
+                            <p class="project-description">An upcoming innovative project. Details will be revealed
+                                soon. Stay tuned for updates on this frontier technology solution.</p>
+                            <div class="project-tech">
+                                <span class="tag">Hardware</span>
+                                <span class="tag">Software</span>
+                                <span class="tag">Upcoming</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/PRAJWALJAN4" target="_blank"
+                                    class="project-link project-link-github">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="#" class="project-link project-link-demo">
+                                    <i class="fas fa-lock"></i> Soon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1169,7 +1254,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.section, .timeline-item, .skill-box').forEach(el => {
+        document.querySelectorAll('.section, .timeline-item, .skill-box, .project-card').forEach(el => {
             observer.observe(el);
         });
 
@@ -1328,7 +1413,7 @@
             progressBarFill.style.width = progress + '%';
 
             // Update active checkpoint based on scroll position
-            const sections = ['hero', 'about', 'experience', 'skills', 'contact'];
+            const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'contact'];
             let activeIndex = 0;
 
             sections.forEach((sectionId, index) => {
