@@ -178,6 +178,10 @@
                     <div class="checkpoint-dot"></div>
                     <span class="checkpoint-label">Projects</span>
                 </div>
+                <div class="checkpoint" data-section="achievements">
+                    <div class="checkpoint-dot"></div>
+                    <span class="checkpoint-label">Awards</span>
+                </div>
                 <div class="checkpoint" data-section="contact">
                     <div class="checkpoint-dot"></div>
                     <span class="checkpoint-label">Contact</span>
@@ -193,6 +197,7 @@
                     <a href="#experience" class="nav-link">Journey</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#achievements" class="nav-link">Awards</a>
                     <a href="#contact" class="nav-cta">Get in Touch!</a>
                     <button id="theme-toggle" class="theme-toggle-nav" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
@@ -224,6 +229,9 @@
                     </div>
                     <div class="hero-cta-container">
                         <a href="#contact" class="btn-cta">Get in Touch!</a>
+                        <a href="resume.pdf" target="_blank" class="btn-cta secondary">
+                            <i class="fas fa-file-download"></i> View Resume
+                        </a>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -593,6 +601,19 @@
                         </div>
                     </div>
 
+                    <div class="skill-box">
+                        <div class="skill-box-header">
+                            <i class="fas fa-robot skill-icon-large"></i>
+                            <h3 class="skill-box-title">Agentic AI</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tag"><i class="fas fa-link"></i> LangChain</span>
+                            <span class="tag"><i class="fas fa-project-diagram"></i> LangGraph</span>
+                            <span class="tag"><i class="fas fa-microscope"></i> LangSmith</span>
+                            <span class="tag"><i class="fas fa-cloud-upload-alt"></i> LangServe</span>
+                        </div>
+                    </div>
+
                     <div class="skill-box highlight-box">
                         <div class="skill-box-header">
                             <i class="fas fa-sitemap skill-icon-large"></i>
@@ -755,6 +776,32 @@
                                     <span class="star filled"></span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="achievements">
+                <h2 class="section-title">ACHIEVEMENTS</h2>
+                <div class="achievement-card">
+                    <div class="achievement-image-container">
+                        <img src="image/hack.png" alt="AgriTech Hackathon Win" class="achievement-image"
+                            onerror="this.src='image/hack.jpeg'; this.onerror=function(){this.parentElement.innerHTML='<i class=\'fas fa-trophy\' style=\'font-size: 5rem; color: var(--yellow);\'></i>'; this.parentElement.className='achievement-image-placeholder';};">
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-badge">3rd Place Winner</div>
+                        <h3 class="achievement-title">AgriTech Hackathon 2026</h3>
+                        <p class="achievement-description">
+                            Secured 3rd place at the prestigious AgriTech Hackathon hosted by <strong>Somaiya Vidyavihar
+                                University, Mumbai</strong>.
+                            Our team, <strong>Cronix</strong>, developed a Personalized Agentic AI for Farmers—an
+                            autonomous assistant that delivers real-time, weather-aware, and data-driven agricultural
+                            insights to empower smarter decision-making.
+                        </p>
+                        <div class="achievement-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Mumbai, India</span>
+                            <span><i class="fas fa-users"></i> Team Cronix</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
                         </div>
                     </div>
                 </div>
@@ -1413,7 +1460,7 @@
             progressBarFill.style.width = progress + '%';
 
             // Update active checkpoint based on scroll position
-            const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'contact'];
+            const sections = ['hero', 'about', 'experience', 'skills', 'projects', 'achievements', 'contact'];
             let activeIndex = 0;
 
             sections.forEach((sectionId, index) => {

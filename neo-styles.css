@@ -878,6 +878,11 @@ body[data-theme="dark"] .job-desc i {
   box-shadow: 0 0 0 var(--border);
 }
 
+.btn-cta.secondary {
+  background: var(--yellow);
+  margin-top: -0.5rem;
+}
+
 .coffee-cta-wrapper {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -3789,5 +3794,104 @@ body[data-theme="dark"] .project-image-container {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+/* Achievements Section */
+.achievement-card {
+  background: var(--white);
+  border: 4px solid var(--border);
+  box-shadow: 10px 10px 0 var(--border);
+  padding: 2.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 3rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 var(--border);
+}
+
+.achievement-image-container {
+  flex: 0 0 45%;
+  border: 4px solid var(--border);
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+body[data-theme="dark"] .achievement-image-container {
+  background: #333;
+}
+
+.achievement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achievement-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.achievement-badge {
+  background: var(--pink);
+  color: var(--text);
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  border: 2px solid var(--border);
+  width: fit-content;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.achievement-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.achievement-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.achievement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.achievement-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .achievement-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .achievement-image-container {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 250px;
   }
 }
