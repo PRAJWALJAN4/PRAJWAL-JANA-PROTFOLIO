@@ -3895,3 +3895,70 @@ body[data-theme="dark"] .achievement-image-container {
     min-height: 250px;
   }
 }
+
+/* Workshop Slider */
+.workshop-slider {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  animation: slide-animation 9s infinite alternate ease-in-out;
+}
+
+.workshop-slider img {
+  width: 33.333%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--white);
+}
+
+body[data-theme="dark"] .workshop-slider img {
+  background: #333;
+}
+
+@keyframes slide-animation {
+  0%, 25% {
+    transform: translateX(0);
+  }
+  37.5%, 62.5% {
+    transform: translateX(-33.333%);
+  }
+  75%, 100% {
+    transform: translateX(-66.666%);
+  }
+}
+
+/* Workshop Slider 2 */
+.workshop-slider-2 {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  animation: slide-animation-2 6s infinite alternate ease-in-out;
+}
+
+.workshop-slider-2 img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--white);
+}
+
+body[data-theme="dark"] .workshop-slider-2 img {
+  background: #333;
+}
+
+@keyframes slide-animation-2 {
+  0%, 40% {
+    transform: translateX(0);
+  }
+  60%, 100% {
+    transform: translateX(-50%);
+  }
+}
