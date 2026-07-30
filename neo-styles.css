@@ -3962,3 +3962,197 @@ body[data-theme="dark"] .workshop-slider-2 img {
     transform: translateX(-50%);
   }
 }
+
+/* Internship Image Slider (10 images) */
+.internship-image-slider {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  animation: slide-animation-10 30s infinite alternate ease-in-out;
+}
+
+.internship-image-slider img {
+  width: 10%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--white);
+}
+
+body[data-theme="dark"] .internship-image-slider img {
+  background: #333;
+}
+
+@keyframes slide-animation-10 {
+  0%, 5% { transform: translateX(0); }
+  10%, 15% { transform: translateX(-10%); }
+  20%, 25% { transform: translateX(-20%); }
+  30%, 35% { transform: translateX(-30%); }
+  40%, 45% { transform: translateX(-40%); }
+  50%, 55% { transform: translateX(-50%); }
+  60%, 65% { transform: translateX(-60%); }
+  70%, 75% { transform: translateX(-70%); }
+  80%, 85% { transform: translateX(-80%); }
+  90%, 100% { transform: translateX(-90%); }
+}
+
+/* ========================================
+   INTERNSHIPS SECTION
+   ======================================== */
+
+/* Icon display area (replaces image for internships) */
+.internship-icon-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(135deg, rgba(102, 217, 239, 0.08) 0%, rgba(79, 172, 254, 0.08) 100%);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+body[data-theme="dark"] .internship-icon-display {
+  background: linear-gradient(135deg, rgba(102, 217, 239, 0.05) 0%, rgba(79, 172, 254, 0.05) 100%);
+}
+
+.internship-icon-display i {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.achievement-card:hover .internship-icon-display i {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Currently Active status badge */
+.internship-status-badge {
+  padding: 0.4rem 1.2rem;
+  background: var(--green, #a8e6cf);
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  position: relative;
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    box-shadow: 3px 3px 0 var(--border);
+  }
+  50% {
+    box-shadow: 3px 3px 0 var(--border), 0 0 0 6px rgba(168, 230, 207, 0.3);
+  }
+}
+
+/* Active internship card left accent border */
+.internship-card-highlight {
+  position: relative;
+  border-left: 8px solid var(--cyan);
+}
+
+.internship-card-highlight::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  width: 8px;
+  height: calc(100% + 8px);
+  background: linear-gradient(180deg, var(--cyan), #4facfe, var(--cyan));
+  background-size: 100% 200%;
+  animation: shimmer-border 3s ease-in-out infinite;
+}
+
+@keyframes shimmer-border {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Internship skill highlight pills */
+.internship-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.internship-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.internship-highlight-item:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border);
+  background: var(--cyan);
+}
+
+.internship-highlight-item i {
+  font-size: 0.9rem;
+  color: var(--cyan);
+}
+
+.internship-highlight-item:hover i {
+  color: var(--text);
+}
+
+body[data-theme="dark"] .internship-highlight-item {
+  background: #2a2a2a;
+}
+
+body[data-theme="dark"] .internship-highlight-item:hover {
+  background: var(--cyan);
+}
+
+/* Responsive internship section */
+@media (max-width: 992px) {
+  .internship-icon-display {
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+
+  .internship-icon-display i {
+    font-size: 3.5rem !important;
+  }
+
+  .internship-highlights {
+    gap: 0.5rem;
+  }
+
+  .internship-highlight-item {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .internship-highlights {
+    gap: 0.4rem;
+  }
+
+  .internship-highlight-item {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    box-shadow: 2px 2px 0 var(--border);
+  }
+}
